@@ -2,6 +2,9 @@ var cardsArray = [];
 
 $(document).ready(function() {
   cardsArray = JSON.parse(localStorage.getItem("cards"))
+  if(cardsArray == null){
+    cardsArray = ["Your First Card!"]
+  }
   generateTable()
 })
 
