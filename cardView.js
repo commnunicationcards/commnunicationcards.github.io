@@ -1,5 +1,6 @@
 var cardIndex = 0
 var cardsArray = [];
+var hide = false
 
 
 
@@ -7,6 +8,21 @@ $(document).ready(function(){
   cardsArray = JSON.parse(localStorage.getItem("cards"))
   $("#cardContent").text(cardsArray[cardIndex])
 })
+
+function hideControls() {
+  if(!hide){
+    $("#hideControls").val("+")
+    $("#hideControls").css("width", "10%")
+    hide = true
+  } else {
+    $("#hideControls").val("Hide controls")
+    $("#hideControls").css("width", "32%")
+    hide = false
+  }
+  $("#nextCard").fadeToggle()
+  $("#prevCard").fadeToggle()
+  $("#editButton").fadeToggle()
+}
 
 function nextCard() {
   if(cardIndex == cardsArray.length-1){

@@ -8,9 +8,10 @@
     <script src="cardView.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="navEditor"><a href="./editor.html">Editor</a></div>
-    <div id="nextCard"><a href="#" onclick="nextCard()">Next Card</a></div>
-    <div id="prevCard"><a href="#" onclick="prevCard()">Prev. Card</a></div>
+    <input type="button" id="hideControls" class="controlButton" onclick="hideControls()" value="Hide Controls">
+    <input type="button" id="editButton" class="controlButton" onclick="window.location.replace('./editor.html')" value="Editor">
+    <input type="button" id="nextCard" class="controlButton" onclick="nextCard()" value="Next Card">
+    <input type="button" id="prevCard" class="controlButton" onclick="prevCard()" value="Prev. Card">
     <div id="cardContent"></div>
   </body>
 </html>

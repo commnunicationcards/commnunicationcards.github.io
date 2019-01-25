@@ -2,21 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="veiwport" content="width=device-width, initial-scale=1.0"/>
-    
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communication Cards Online - Editor</title>
     <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="editCards.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="navEditor"><a href="./index.html">Show Cards</a></div>
-    <div class="saveChanges"><input type="button" onclick="save()" value="Save Changes"></div>
-    <div class="newCard"><textarea id="newCardText" rows="4" cols="25"></textarea><br><input type="button" value="Add Card" onclick="newCard()"></div>
+    <!-- <div class="return"><a href="./index.html">Show Cards</a></div> -->
+    <div class="saveChanges"><input type="button" class="controlButton" onclick="save()" value="Save Changes"><input type="button" class="controlButton" onclick="window.location.replace('./index.html')" value="Discard Changes"></div>
+    <div class="newCard"><textarea id="newCardText" rows="4" cols="25"></textarea></div>
+    <div><input type="button" id="addCardButton" class="controlButton" value="Add Card" onclick="newCard()"></div>
     <table id="cardTable">
 
     </table>
 
-    <footer style="bottom: 2%">This page is still under construction. Everything is functional however the page needs to be styled</footer>
+    <!-- <footer style="bottom: 2%">This page is still under construction. Everything is functional however the page needs to be styled</footer> -->
   </body>
 </html>

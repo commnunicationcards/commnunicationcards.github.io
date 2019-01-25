@@ -17,6 +17,26 @@
   bottom: 5%;
   z-index: 2;
   font-size: 3em;
+  width:30%;
+  height: auto;
+}
+#hideControls{
+  right: 2%;
+  position: fixed;
+  top: 5%;
+  z-index: 2;
+  font-size: 3em;
+  width:32%;
+  height: auto;
+}
+#editButton{
+  left: 2%;
+  position: fixed;
+  top: 5%;
+  z-index: 2;
+  font-size: 3em;
+  width:30%;
+  height: auto;
 }
 #prevCard{
   left: 2%;
@@ -24,14 +44,59 @@
   bottom: 5%;
   z-index: 2;
   font-size: 3em;
+  width:30%;
+  height: auto;
 }
 
-.navEditor{
+#cardTable td{
+  font-size: 1em;
+  padding: 1%;
+  overflow-x:scroll;
+}
+.button{
+  font-size: 1em
+}
+.controlButton{
+  font-size: 1.3em;
+  width: 50%;
+  padding: 1%
+}
+#newCardText{
+  width: 98.3%;
+  border: 2px solid #CCC;
+  resize: none;
+  font-size: 2em;
+}
+#addCardButton{
+  width: 100%;
+}
+#cardTable{
+  margin-top: 1%;
+  width: 100%;
+  border: 2px solid #333;
+  padding: 2%;
+}
+tr{
+  background-color: #FFF;
+}
+tr:nth-child(even){
+  background-color: #CCC;
+}
+
+
+/* .navEditor{
   position: fixed;
   left: 2%;
   top: 2%;
   font-size: 3em;
+  width: 100%
+} */
+
+#editButton{
+  max-width: 200px
 }
+
+
 
 html, body{
   height: 100%;

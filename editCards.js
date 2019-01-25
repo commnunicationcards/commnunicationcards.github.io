@@ -12,8 +12,11 @@ $(document).ready(function() {
 function generateTable() {
   $("#cardTable").text("")
   for(var i = 0; i < cardsArray.length; i++){
-    $("#cardTable").append(`<tr><td>`+cardsArray[i]+`</td><td><input type="button" onclick="delCard(`+i+`)" value="Delete"></tr>`)
-
+    var content = cardsArray[i]
+    if(content.length > 20){
+      content = content.substring(0, 25)+"..."
+    }
+    $("#cardTable").append(`<tr><td><input type="button" class="button" onclick="delCard(`+i+`)" value="Delete"><td>`+content+`</td></tr>`)
   }
 }
 
@@ -24,7 +27,7 @@ function delCard(x) {
 
 function save() {
   localStorage.setItem("cards", JSON.stringify(cardsArray))
-  window.location.href = "./index.html"
+  window.location.replace("./index.html")
 }
 
 function newCard() {
