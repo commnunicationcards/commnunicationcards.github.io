@@ -1,14 +1,10 @@
 var cardIndex = 0
-var cardsArray = [];
 var hide = false
 
 
 
 $(document).ready(function(){
-  cardsArray = JSON.parse(localStorage.getItem("cards"))
-  if(cardsArray == null || cardsArray.length == 0){
-    cardsArray = ["Press 'Editor' to go to the editor", "Press 'Delete' to delete a card", "Type a card and press 'Add Card' to add a card","Choose either 'Save Changes' or 'Discard Changes'", "Delete all cards to restore default cards"]
-  }
+  getCards()
   $("#cardContent").text(cardsArray[cardIndex])
 })
 
