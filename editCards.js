@@ -21,7 +21,7 @@ function delCard(x) {
 
 function save() {
   localStorage.setItem("cards", JSON.stringify(cardsArray))
-  window.location.href = "/index.html"
+  window.location.href = "./index.html"
 }
 
 function newCard() {
