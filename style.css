@@ -73,8 +73,10 @@
 #cardTable{
   margin-top: 1%;
   width: 100%;
-  border: 2px solid #333;
+  border: 2px solid #CCC;
   padding: 2%;
+  border-collapse: collapse;
+  margin-bottom: 2%;
 }
 tr{
   background-color: #FFF;
